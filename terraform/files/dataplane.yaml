@@ -1,0 +1,12 @@
+machine:
+  kubelet:
+    extraArgs:
+      cloud-provider: external
+      node-labels: "project.io/node-pool=worker"
+  network:
+    interfaces:
+      - deviceSelector:
+          physical: true
+cluster:
+    controlPlane:
+        endpoint: https://${virtual_ip}:6443
