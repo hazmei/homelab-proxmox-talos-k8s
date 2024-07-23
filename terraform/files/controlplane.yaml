@@ -1,0 +1,20 @@
+machine:
+  kubelet:
+    extraArgs:
+      cloud-provider: external
+  network:
+    interfaces:
+      - deviceSelector:
+          physical: true
+        vip:
+          ip: ${virtual_ip}
+  features:
+    kubernetesTalosAPIAccess:
+      enabled: true
+      allowedRoles:
+        - os:reader
+      allowedKubernetesNamespaces:
+        - kube-system
+cluster:
+  controlPlane:
+      endpoint: https://${virtual_ip}:6443
