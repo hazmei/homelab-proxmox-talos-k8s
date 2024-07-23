@@ -32,3 +32,9 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+.DS_Store
+talosconfig
+kubeconfig
+terraform/files/*.cfg
+*.sh
