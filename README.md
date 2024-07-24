@@ -1,8 +1,17 @@
 # homelab-proxmox-talos-k8s
 
-This repository contains the terraform code used to spin up kubernetes cluster on [Proxmox VE](https://www.proxmox.com/en/proxmox-virtual-environment/overview) using [Talos Linux](https://www.talos.dev/) OS.  
+This repository contains the terraform code used to spin up kubernetes cluster on [Proxmox VE](https://www.proxmox.com/en/proxmox-virtual-environment/overview) using [Talos Linux](https://www.talos.dev/) OS.
 
 [sparrow-bork/vm-nocloud/proxmox](https://registry.terraform.io/modules/sparrow-bork/vm-nocloud/proxmox/latest) terraform module is used to generate the [Proxmox VE](https://www.proxmox.com/en/proxmox-virtual-environment/overview) VM for each nodes.
+
+### Pre-commit Setup
+
+Install pre-commit and detect-secrets
+```bash
+brew update
+brew install pre-commit detect-secrets
+```
+
 
 ### Usage
 
