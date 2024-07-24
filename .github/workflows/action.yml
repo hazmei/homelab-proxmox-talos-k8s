@@ -2,9 +2,9 @@ name: Validate Terraform
 
 on: pull_request
 
-# defaults:
-#   run:
-#     working-directory: ./terraform
+defaults:
+  run:
+    working-directory: ./terraform
 
 env:
   PM_API_URL: 'https://10.255.0.8:8006/api2/json'
