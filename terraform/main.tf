@@ -1,5 +1,5 @@
 resource "time_sleep" "this" {
-  create_duration = "1m"
+  create_duration = "10m"
 
   depends_on = [
     module.talos_control_nodes,
